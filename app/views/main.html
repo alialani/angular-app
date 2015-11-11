@@ -1,26 +1,18 @@
-<div class="jumbotron">
-  <h1>Do some addition!</h1>
-  <div ng-app ng-init="firstnum=1;secondnum=2" style="margin-bottom: 20px">
-    <input type="number" min="0" ng-model="firstnum">
-      plus
-    <input type="number" min="0" ng-model="secondnum">
-      equals 
-    <b>{{firstnum + secondnum}}</b>
-  </div>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
+  <h1>NBA APP</h1>
+  <p class="lead">
+    <div>
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Refresh</button>
+        </p>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+        <!-- <div ng-bind-html="trustedHtml"></div> -->
+        <!-- <div>{{nbaVideoResults}}</div> -->
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{items[0].videoId}}" frameborder="0" allowfullscreen></iframe> -->
+
+
+        <div ng-bind-html="currentVid"></div>
+
+    </div>
   </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
 </div>
