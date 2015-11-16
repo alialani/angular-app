@@ -1,18 +1,42 @@
+
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
+  <h2>Select NBA Channel</h2>
+  <p class="lead">
+    <div ng-init="channel='UCbNWe0snu7U9H2qioNH2nvg'">
+        <p>
+          <label for="channel">Channel:
+            <input type="text" name="channel" ng-model="channel">
+          </label>
+        </p>
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="findChannel()">Find Channel</button>
+          <div ng-bind-html="currentVid"></div>
+        </p>
+    </div>
+  </p>
+</div>
+
+
+
+
+
+
+
+<!-- <div ng-app class="jumbotron" ng-controller="MainCtrl">
   <h1>NBA APP</h1>
   <p class="lead">
     <div>
         <p>
-          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Refresh</button>
-        </p>
+          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">Video</button>
+        </p> -->
 
         <!-- <div ng-bind-html="trustedHtml"></div> -->
         <!-- <div>{{nbaVideoResults}}</div> -->
         <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{items[0].videoId}}" frameborder="0" allowfullscreen></iframe> -->
 
-
-        <div ng-bind-html="currentVid"></div>
+        <!-- <div>{{nbaVideoResults}}</div> -->
+<!--         <div ng-bind-html="currentVid"></div>
 
     </div>
   </p>
-</div>
+</div> -->

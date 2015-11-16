@@ -8,16 +8,16 @@
  * Factory in the angularAppApp.
  */
 angular.module('angularAppApp')
-  .factory('current', function ($resource) {
+  .factory('videosearch', function ($resource) {
     // Service logic
     // ...
 
     // Public API here
-    return $resource('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&channelId=:channel&order=date&key=AIzaSyDZqbprMDMRgEyeJV3ink9cCfqzwpvs8xY', {}, {
-      query: {
+    return $resource('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&channelId=:chanId&order=date&key=AIzaSyDZqbprMDMRgEyeJV3ink9cCfqzwpvs8xY', {}, {
+      find: {
         method:'GET',
         params:{
-          channel: 'UCbNWe0snu7U9H2qioNH2nvg'
+          chanId: 'UCvZi1jVVZ2yq0k5kkjzmuGw'        
         }
       }
     });  
