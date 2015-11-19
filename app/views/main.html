@@ -1,8 +1,8 @@
 
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h2>Select NBA Channel</h2>
+  <h2>Enter NBA Team Name</h2>
   <p class="lead">
-    <div ng-init="channel='UCbNWe0snu7U9H2qioNH2nvg'">
+    <div ng-init="channel='Los Angeles Lakers'">
         <p>
           <label for="channel">Channel:
             <input type="text" name="channel" ng-model="channel">
@@ -10,10 +10,10 @@
         </p>
         <p>
           <button class="btn btn-lg btn-primary" ng-click="findChannel()">Find Channel</button>
-          <div ng-bind-html="currentVid"></div>
+          <!-- <div>{{channelFound}}</div> -->
         </p>
-    </div>
-  </p>
+
+
 </div>
 
 

@@ -1,0 +1,12 @@
+<h1>Recent videos for {{chanName}}</h1>
+
+<button class="btn btn-sm btn-primary" ng-click="saveChannel()">Favorite</button>
+<div ng-repeat="vid in videos.items | limitTo: 5">
+	<iframe width="280" height="157" ng-src="{{ trustThisLink('https://www.youtube.com/embed/' + vid.id.videoId) }}" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+<button class="btn btn-sm btn-primary" ng-click="showRest()">Show All</button>
+<div ng-repeat="vid in videos.items | limitTo: 5">
+	<iframe width="280" height="157" ng-src="{{ trustAllLinks('https://www.youtube.com/embed/' + vid.id.videoId) }}" frameborder="0" allowfullscreen></iframe>
+</div>

@@ -13,11 +13,11 @@ angular.module('angularAppApp')
     // ...
 
     // Public API here
-    return $resource('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&channelId=:chanId&order=date&key=AIzaSyDZqbprMDMRgEyeJV3ink9cCfqzwpvs8xY', {}, {
+    return $resource('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&channelId=:query&order=date&key=AIzaSyDZqbprMDMRgEyeJV3ink9cCfqzwpvs8xY', {}, {
       find: {
         method:'GET',
         params:{
-          chanId: 'UCvZi1jVVZ2yq0k5kkjzmuGw'        
+          query: 'UCeYc_OjHs3QNxIjti2whKzg'        
         }
       }
     });  

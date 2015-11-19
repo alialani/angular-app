@@ -17,6 +17,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ngStorage',
     'ngTouch'
   ])
   .config(function ($routeProvider) {
@@ -30,6 +31,16 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/current', {
+        templateUrl: 'views/current.html',
+        controller: 'CurrentCtrl',
+        controllerAs: 'current'
+      })
+      .when('/allvideos/:channel', {
+        templateUrl: 'views/allvideos.html',
+        controller: 'AllvideosCtrl',
+        controllerAs: 'allvideos'
       })
       .otherwise({
         redirectTo: '/'

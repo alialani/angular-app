@@ -17,7 +17,7 @@ angular.module('angularAppApp')
       query: {
         method:'GET',
         params:{
-          channel: 'UCbNWe0snu7U9H2qioNH2nvg'
+          channel: 'UCvZi1jVVZ2yq0k5kkjzmuGw'
         }
       }
     });  
