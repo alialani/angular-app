@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "transitions";
 // endbower
 
 .browsehappy {
@@ -88,4 +89,31 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+  label {
+    color: white;
+  }
+
+  .bg-warning {
+    font-size: 20px;
+    color: red;
+    border-style: ridge;
+    border-color: red;
+    padding-left: 10px;
+  }
+
+
+  .bg-success {
+    font-size: 20px;
+    color: green;
+    border-style: ridge;
+    border-color: green;
+    padding-left: 10px;
+  }
+
+  .team-name {
+    margin-left: 253px;
+    margin-top: -52px;
+    color: grey;
 }

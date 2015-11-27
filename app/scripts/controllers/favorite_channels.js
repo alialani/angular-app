@@ -8,10 +8,6 @@
  * Controller of the angularAppApp
  */
 angular.module('angularAppApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('favorite_channelsCtrl', function ($scope, $localStorage) {
+ 	$scope.favchannels = $localStorage.savedChannels;
   });

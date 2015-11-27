@@ -27,10 +27,10 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/favorite_channels', {
+        templateUrl: 'views/favorite_channels.html',
+        controller: 'favorite_channelsCtrl',
+        controllerAs: 'favorite_channels'
       })
       .when('/current', {
         templateUrl: 'views/current.html',

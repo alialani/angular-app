@@ -15,9 +15,9 @@ angular.module('angularAppApp')
     	  		{"name1": "miami", "name2": "heat", "id":"UC8bZbiKoPNRi3taABIaFeBw"},
     	  		{"name1": "boston", "name2": "celtics", "id": "UCMfT9dr6xC_RIWoA9hI0meQ"},
     	  		{"name1": "denver", "name2": "nuggets", "id": "UCl8hzdP5wVlhuzNG3WCJa1w"},		
-    	  		{"name1": "Los Angeles", "name2": "Clippers", "id": "UCoK6pw3iIVF9WAWnQd3hj-g"},
+    	  		{"name1": "los angeles", "name2": "clippers", "id": "UCoK6pw3iIVF9WAWnQd3hj-g"},
     	  		{"name1": "Brooklyn", "name2": "Nets", "id": "UCTenKHt0h3VjdMvRWP6Lbvw"},
-    	  		{"name1": "Dallas", "name2": "Mavericks", "id": "UCZywaCS_y9YOSSAC9z3dIeg"},
+    	  		{"name1": "dallas", "name2": "mavericks", "id": "UCZywaCS_y9YOSSAC9z3dIeg"},
     	  		{"name1": "houston", "name2": "rockets", "id": "UC8SNI91tgp9O93EyCU579nQ"},
     	  		{"name1": "new york", "name2": "knicks", "id": "UC0hb8f0OXHEzDrJDUq-YVVw"},
     	  		{"name1": "memphis", "name2": "grizzlies", "id": "UCCK5EpWKYrAmILfaZThCV-Q"},
@@ -45,21 +45,22 @@ angular.module('angularAppApp')
 			];
 
 			var getId = function (channelName) {
+                var channelFound = false;
 				var channelLowCase = channelName.toLowerCase();
 				for(var i = 0; i < channelNameIdList.length; i++) {
 					var name1 = channelNameIdList[i].name1;
 					var name2 = channelNameIdList[i].name2;
 					var fullName = name1.concat(" " + name2);
-					if ( channelLowCase === name1 || channelLowCase === name2 || channelLowCase === fullName) {
-						console.log(fullName);
-						$localStorage.channelName = fullName.toLowerCase();
+					if ( channelLowCase === name1 || channelLowCase === name2 || channelLowCase === fullName ) {
+						$localStorage.channelName = fullName.toUpperCase();
+                        channelFound = true;
 						$window.location = "#/current";
 						return channelNameIdList[i].id;
-					} else {
-						console.log("Wrong channel name!");
-					}
+					} 
 				}
-			    
+			    if (!channelFound) {
+                    $scope.searchInput = {'wrongInput': true};
+                }
 			};
 
 	        $scope.channelFound = videosearch.find({

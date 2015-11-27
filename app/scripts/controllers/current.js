@@ -16,36 +16,34 @@ angular.module('angularAppApp')
   		return $sce.trustAsResourceUrl(link);
   	};
 
-    $scope.showRest = function() {
-      $scope.trustAllLinks = function(link) {
-        return $sce.trustAsResourceUrl(link);
-      };
-    };
+
+
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $('.btn-primary').on('click', function() {
+      $('.team-name').addClass('animated bounceIn');
+      $('.channel-saved-alert').addClass('animated flash').one(animationEnd, 
+        function() {
+          $(this).removeClass('animated flash');
+        });
+    });
 
     $scope.saveChannel = function() {
     	var doesExist = false;
 
     	if (!$localStorage.savedChannels) {
     		$localStorage.savedChannels = [];
-    		$localStorage.savedChannels.push($scope.chanName);
     	} else {
     		for ( var i=0; i < $localStorage.savedChannels.length; i++) {
 	    		if ( $localStorage.savedChannels[i] === $scope.chanName ) {
-	    			console.log("Already there!");
 	    			doesExist = true;
-	    		}
-	    		else {
-	    			doesExist = false;
+            $scope.channelSaved = {'duplicate': true};
 	    		}
 	    	}
-
-	    	if (!doesExist) {
-	    		$localStorage.savedChannels.push($scope.chanName);
-	    	}
+      }
+    	if (!doesExist) {
+    		$localStorage.savedChannels.push($scope.chanName);
+        $scope.channelSaved = {'success': true};
     	}
-
-    	
-	  
    };
 });
   
