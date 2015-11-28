@@ -1,7 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "transitions";
 // endbower
 
 .browsehappy {
@@ -116,4 +115,22 @@ body {
     margin-left: 253px;
     margin-top: -52px;
     color: grey;
+}
+
+div[ng-view].ng-enter {
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+div[ng-view].ng-leave {
+    -webkit-animation: fadeOut 0.5s;
+    animation: fadeOut 0.5s;
+}
+
+.team-name {
+  -webkit-animation-duration: bounceIn 4s;  
+}
+
+.channel-saved-alert {
+   -webkit-animation-duration: flash 4s;
 }
