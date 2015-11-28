@@ -9,5 +9,9 @@ div[ng-view].ng-leave {
 }
 
 .team-name {
-  -webkit-animation-duration: 4s;	
+  -webkit-animation-duration: bounceIn 4s;	
+}
+
+.channel-saved-alert {
+	 -webkit-animation-duration: flash 4s;
 }

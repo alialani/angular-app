@@ -16,7 +16,7 @@ angular.module('angularAppApp')
     	  		{"name1": "boston", "name2": "celtics", "id": "UCMfT9dr6xC_RIWoA9hI0meQ"},
     	  		{"name1": "denver", "name2": "nuggets", "id": "UCl8hzdP5wVlhuzNG3WCJa1w"},		
     	  		{"name1": "los angeles", "name2": "clippers", "id": "UCoK6pw3iIVF9WAWnQd3hj-g"},
-    	  		{"name1": "Brooklyn", "name2": "Nets", "id": "UCTenKHt0h3VjdMvRWP6Lbvw"},
+    	  		{"name1": "Brooklyn", "name2": "nets", "id": "UCTenKHt0h3VjdMvRWP6Lbvw"},
     	  		{"name1": "dallas", "name2": "mavericks", "id": "UCZywaCS_y9YOSSAC9z3dIeg"},
     	  		{"name1": "houston", "name2": "rockets", "id": "UC8SNI91tgp9O93EyCU579nQ"},
     	  		{"name1": "new york", "name2": "knicks", "id": "UC0hb8f0OXHEzDrJDUq-YVVw"},
