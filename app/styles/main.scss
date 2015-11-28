@@ -115,6 +115,7 @@ body {
     margin-left: 253px;
     margin-top: -52px;
     color: grey;
+    -webkit-animation-duration: bounceIn 4s;
 }
 
 div[ng-view].ng-enter {
@@ -125,10 +126,6 @@ div[ng-view].ng-enter {
 div[ng-view].ng-leave {
     -webkit-animation: fadeOut 0.5s;
     animation: fadeOut 0.5s;
-}
-
-.team-name {
-  -webkit-animation-duration: bounceIn 4s;  
 }
 
 .channel-saved-alert {
