@@ -10,8 +10,17 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   padding: 0;
+  background-image: url(../images/backgrounds-ball.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -130,4 +139,51 @@ div[ng-view].ng-leave {
 
 .channel-saved-alert {
    -webkit-animation-duration: flash 4s;
+}
+
+.video-frame:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.favorite-channels p {
+  color: blue;
+  font-weight: bold;
+}
+
+.carousel {
+  width: 90%;
+  margin: 0;
+}
+
+.item .col-md-2 a img {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: auto;
+}
+
+.item .col-md-2 {
+  margin: 0;
+  padding: 0;
+  border: ridge;
+}
+
+.carousel {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-inner {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel .slide {
+  margin: 0;
 }

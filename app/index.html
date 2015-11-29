@@ -16,7 +16,7 @@
 
     <!-- endbuild -->
   </head>
-  <body ng-app="angularAppApp">
+  <body ng-app="angularAppApp" style="margin: 0; padding: 0">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -25,7 +25,7 @@
     <img src="images/nba-logo.png" style="width: 40px; height: auto; margin-left: 50px; margin-top: -20px; display: block; position: absolute; z-index: 10001">
 
     <div class="header" style="margin-top: 20px">
-      <div class="navbar navbar-default" role="navigation">
+      <div class="navbar navbar-default" role="navigation" style="background: maroon">
         <div class="container">
           <div class="navbar-header">
 
@@ -51,11 +51,69 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 0px">
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
+    <div class="container carousel">
+      <div id="myCarousel" class="carousel slide" style="width: 1350px; margin: 0">
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+              <div class="item active">
+                  <div class="row">
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/9q6EqBeIbGY/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/caw5VU09Z4w/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/G3Rqw3WneWI/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/OQa5Pf8vEMg/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/z4Ks1fVuguo/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/wWVFplU4mYM/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                  </div>
+                  <!--/row-->
+              </div>
+              <!--/item-->
+
+              <div class="item">
+                  <div class="row">
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/FMG0S7HUaTc/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/CJVPoEj03Gs/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/qJClDSM88RQ/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/II16NfGCTj4/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/L0xkX2r7n8I/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="#x"><img src="https://i.ytimg.com/vi/Qlb8FqETXGc/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+                      </div>
+                  </div>
+                  <!--/row-->
+              </div>
+              <!--/item-->
+          </div>
+          <!--/carousel-inner--> 
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+      </div>
+      <!--/myCarousel-->
 
     </div>
 

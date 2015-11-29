@@ -1,4 +1,6 @@
-
+<!-- 
+<p>{{videos}}</p>
+ -->
 <h2>Recent videos for</h2>
 <div class="team-name"><h2>{{chanName}}</h2></div>
 
@@ -14,7 +16,7 @@
 </div>
 
 <div ng-repeat="vid in videos.items | limitTo: 10">
-	<iframe width="280" height="157" ng-src="{{ trustThisLink('https://www.youtube.com/embed/' + vid.id.videoId) }}" frameborder="0" allowfullscreen></iframe>
+	<iframe class="video-frame" width="280" height="157" ng-src="{{ trustThisLink('https://www.youtube.com/embed/' + vid.id.videoId) }}" frameborder="0" allowfullscreen></iframe>
 	<h4>{{vid.snippet.title}}</h4>
 	<p>{{vid.snippet.description}}</p>
 	<hr>
