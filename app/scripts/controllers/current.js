@@ -12,6 +12,7 @@ angular.module('angularAppApp')
    	
   	$scope.videos = $localStorage.currentVid;
   	$scope.chanName = $localStorage.channelName;
+    $scope.teamLogo = $localStorage.teamLogo;
   	$scope.trustThisLink = function(link) {
   		return $sce.trustAsResourceUrl(link);
   	};
@@ -20,11 +21,13 @@ angular.module('angularAppApp')
 
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     $('.btn-primary').on('click', function() {
+      $('.text-success').hide();
       $('.team-name').addClass('animated bounceIn');
       $('.channel-saved-alert').addClass('animated flash').one(animationEnd, 
         function() {
           $(this).removeClass('animated flash');
         });
+      // $('.channel-saved-alert').addClass('animated flash');
     });
 
     $scope.saveChannel = function() {
@@ -44,6 +47,15 @@ angular.module('angularAppApp')
     		$localStorage.savedChannels.push($scope.chanName);
         $scope.channelSaved = {'success': true};
     	}
+
+      // console.log("Click");
+
+      // angular.element('.team-name').addClass('animated bounceIn');
+      // // $('.channel-saved-alert').(addClass'animated flash').one(animationEnd, 
+      // //   function() {
+      // //     $(this).removeClass('animated flash');
+      // //   });
+      // angular.element('.channel-saved-alert').addClass('animated flash');
    };
 });
   

@@ -10,4 +10,5 @@
 angular.module('angularAppApp')
   .controller('favorite_channelsCtrl', function ($scope, $localStorage) {
  	$scope.favchannels = $localStorage.savedChannels;
+ 	$scope.teamLogo = $localStorage.teamLogo;
   });

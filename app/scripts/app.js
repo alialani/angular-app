@@ -8,6 +8,9 @@
  *
  * Main module of the application.
  */
+
+// $('.carousel').carousel();
+ 
 angular
   .module('angularAppApp', [
     'ngAnimate',

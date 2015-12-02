@@ -99,6 +99,10 @@ body {
   }
 }
 
+  .header {
+    border-bottom: none;
+  }
+
   label {
     color: white;
   }
@@ -121,9 +125,9 @@ body {
   }
 
   .team-name {
-    margin-left: 253px;
-    margin-top: -52px;
-    color: grey;
+    /*margin-left: 200px;*/
+    /*margin-top: -53px;*/
+    color: silver;
     -webkit-animation-duration: bounceIn 4s;
 }
 
@@ -142,8 +146,12 @@ div[ng-view].ng-leave {
 }
 
 .video-frame:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.video-frame {
+  margin-top: 4px;
 }
 
 .favorite-channels p {
@@ -151,39 +159,86 @@ div[ng-view].ng-leave {
   font-weight: bold;
 }
 
+.video-details:hover {
+  background: #000033;
+  border: outset;
+}
+
 .carousel {
   width: 90%;
   margin: 0;
 }
 
-.item .col-md-2 a img {
-  margin: 0;
-  padding: 0;
-  width: 400px;
-  height: auto;
+.item .col-md-3 a img {
+  border: solid;
 }
 
-.item .col-md-2 {
-  margin: 0;
-  padding: 0;
+.item .col-md-3 a img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#social-list {
+  margin-left: 38%;
+  margin-right: 50%;
+  margin-top: -1%;
+  margin-bottom: 1%;
+}
+
+#social-list a img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#social-list a {
+  margin-left: 15px;
+}
+
+
+.search {
+  position: relative;
+}
+.search::before {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 20%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.search:hover::before {
+  -webkit-animation: shine .75s;
+  animation: shine .75s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 95%;
+  }
+}
+
+.search-result {
+  background: black;
   border: ridge;
 }
 
-.carousel {
-  margin: 0;
-  padding: 0;
+.favorite-channels {
+  margin-top: 10px;
+  background: black;
+  border: solid;
 }
 
-.item {
-  margin: 0;
-  padding: 0;
-}
-
-.carousel-inner {
-  margin: 0;
-  padding: 0;
-}
-
-.carousel .slide {
-  margin: 0;
+.navbar-nav li a {
+  color: white;
+  font-weight: bold;
 }

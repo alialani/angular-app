@@ -1,19 +1,18 @@
 
-<div ng-app class="jumbotron" ng-controller="MainCtrl" style="background-image: url(images/nba-logo-on-wood.jpg)">
-
+<div ng-app class="jumbotron search" ng-controller="MainCtrl" style="background-image: url(images/nba-logo-on-wood.jpg); border: ridge">
   <h2 style="color: white">Enter NBA Team Name</h2>
-  <p class="lead">
-    <div ng-init="channel='Los Angeles Lakers'">
-        <p>
-          <label for="channel">Channel:
-            <input type="text" name="channel" ng-model="channel"style="color: black">
-          </label>
-        </p>
-        <p>
-          <button class="btn btn-lg btn-primary" ng-click="findChannel()">Find Channel</button>
-          <div ng-messages="searchInput">
-            <p class="channel-found-alert bg-warning text-warning" ng-message="wrongInput">
-               There is no channel with this name!
-            </p>
-        </p>
+    <p class="lead">
+      <div ng-init="channel='Heat'">
+          <p>
+            <label for="channel">Channel:
+              <input type="text" name="channel" ng-model="channel"style="color: black">
+            </label>
+          </p>
+          <p>
+            <button class="btn btn-lg btn-primary" ng-click="findChannel()">Find Channel</button>
+            <div ng-messages="searchInput">
+              <p class="channel-found-alert bg-warning text-warning" ng-message="wrongInput">
+                 There is no channel with this name!
+              </p>
+          </p>
 </div>

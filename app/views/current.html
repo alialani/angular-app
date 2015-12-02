@@ -1,23 +1,42 @@
 <!-- 
 <p>{{videos}}</p>
  -->
-<h2>Recent videos for</h2>
-<div class="team-name"><h2>{{chanName}}</h2></div>
 
-<button class="btn btn-sm btn-primary" ng-click="saveChannel()" style="margin-bottom: 10px">Favorite</button>
+<div class="container search-result">
+    <div class="row">
+        <div class="col-md-5">
+            <h3 style="color: gray">Recent videos for</h3>
+        </div>
+        <div class="col-md-5">
+            <div id="team-name" class="team-name"><h3><img style="width: 50px; height:auto" src="{{teamLogo}}">{{chanName}}</h3></div>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-sm btn-primary" ng-click="saveChannel()" style="float: right; margin-top: 25px; background: maroon">Favorite</button>
+        </div>
+    </div>
+    
+</div>
 
 <div ng-messages="channelSaved">
     <p class="channel-saved-alert bg-success text-success" ng-message="success">
         {{chanName}} has been saved to your list of favorite channels!
     </p>
-    <p class="channel-saved-alert bg-warning text-warning" ng-message="duplicate">
+    <p id="channel-saved-alert" class="channel-saved-alert bg-warning text-warning" ng-message="duplicate">
         {{chanName}} is already saved in your list of favorite channels!
     </p>
 </div>
 
-<div ng-repeat="vid in videos.items | limitTo: 10">
-	<iframe class="video-frame" width="280" height="157" ng-src="{{ trustThisLink('https://www.youtube.com/embed/' + vid.id.videoId) }}" frameborder="0" allowfullscreen></iframe>
-	<h4>{{vid.snippet.title}}</h4>
-	<p>{{vid.snippet.description}}</p>
-	<hr>
+<div class="container all-videos" style="margin-top: 30px">
+    <div ng-repeat="vid in videos.items | limitTo: 10">
+        <div class="row video-details">
+          <div class="col-md-5">
+            <iframe class="video-frame" width="200" height="125" ng-src="{{ trustThisLink('https://www.youtube.com/embed/' + vid.id.videoId) }}" frameborder="0" allowfullscreen style="border: ridge"></iframe>
+          </div>
+          <div class="col-md-7">
+            <h4 style="color: silver">{{vid.snippet.title}}</h4>
+            <p style="color: gray">{{vid.snippet.description}}</p>
+          </div>
+        </div>
+    	<hr>
+    </div>
 </div>
