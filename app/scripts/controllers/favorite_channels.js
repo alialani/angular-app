@@ -12,3 +12,8 @@ angular.module('angularAppApp')
  	$scope.favchannels = $localStorage.savedChannels;
  	$scope.teamLogo = $localStorage.teamLogo;
   });
+
+	
+$(document).ready(function(){
+	$('#myCarousel3').carousel({interval: 1000});
+});

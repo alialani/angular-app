@@ -44,6 +44,7 @@ angular.module('angularAppApp')
     	  		{"name1": "sacramento", "name2": "kings", "id": "UCSgFigczGdNMilV1K23JgUQ", "image": "images/kings.png"}	
 			];
 
+            $localStorage.teamsList = channelNameIdList;
 			var getId = function (channelName) {
                 var channelFound = false;
 				var channelLowCase = channelName.toLowerCase();

@@ -53,72 +53,61 @@
     </div>
 
 
-    <div class="container" id="social-list">
-      <a href="https://www.facebook.com/fitbit" target="_blank"><img src="images/facebook-maroon.png" width="55" height="auto"></a></li>
-      <a href="https://www.twitter.com/fitbit" target="_blank"><img src="images/twitter-maroon.png" width="45" height="auto"></a></li>               
-      <a href="https://www.youtube.com/user/FitbitOfficialSite" target="_blank"><img src="images/youtube-maroon.gif" width="45" height="auto"></a></li>
-      <a href="https://plus.google.com/+fitbit" target="_blank"><img src="images/instagram-maroon.png" width="45" height="auto"></a></li>
-    </div>
-
-
-    <div class="container teams-image" style="margin-left: 0; margin-bottom: -300px">
-      <h4 style="color: white">ALL NBA TEAMS CHANNELS</h4>
-      <img style="width: 500px; height: auto; margin: ; border: ridge" src="images/teams-image.png">
-    </div>
-
-    <div class="container" style="margin-bottom: 0px; margin-left: 600px">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="container carousel">
-      <div id="myCarousel" class="carousel slide" style="width: 1350px; margin: 0">
-          <!-- Carousel items -->
-          <div class="carousel-inner">
-              <div class="item active">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/9q6EqBeIbGY/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/caw5VU09Z4w/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/G3Rqw3WneWI/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/OQa5Pf8vEMg/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                  </div>
-                  <!--/row-->
-              </div>
-              <!--/item-->
-
-              <div class="item">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/FMG0S7HUaTc/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/CJVPoEj03Gs/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/qJClDSM88RQ/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="#x"><img src="https://i.ytimg.com/vi/II16NfGCTj4/hqdefault.jpg" alt="Image" class="img-responsive"></a>
-                      </div>
-                  </div>
-                  <!--/row-->
-              </div>
-              <!--/item-->
-          </div>
-          <!--/carousel-inner--> 
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+    <div class="row" id="social-list">
+      <div class="col-md-3" style="margin-top: -6px">
+        <a href="https://www.facebook.com/fitbit" target="_blank"><img src="images/facebook-maroon.png" width="67" height="auto"></a></li>
       </div>
-      <!--/myCarousel-->
-
+      <div class="col-md-3">
+        <a href="https://www.twitter.com/fitbit" target="_blank"><img src="images/twitter-maroon.png" width="55" height="auto"></a></li>
+      </div>
+      <div class="col-md-3">               
+        <a href="https://www.youtube.com/user/FitbitOfficialSite" target="_blank"><img src="images/youtube-maroon.gif" width="55" height="auto"></a></li>
+      </div>
+      <div class="col-md-3">
+        <a href="https://plus.google.com/+fitbit" target="_blank"><img src="images/instagram-maroon.png" width="55" height="auto"></a></li>
+      </div>
     </div>
+
+    <div ng-include="'views/teams-carousel.html'"></div>
+
+
+        <div style="margin-top: -14px">
+          <div ng-view=""></div>
+        </div>
+
+    <h3 style="margin-left: 2%; margin-bottom: -2%; color: white">Random Videos</h3>
+    <div class="row random-videos" style="background: black; width: 1370px; margin-left: 0; margin-top: 30px; padding: 30px">
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/9q6EqBeIbGY/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/caw5VU09Z4w/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/G3Rqw3WneWI/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/OQa5Pf8vEMg/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+    </div>
+    <!--/row-->
+
+    <div class="row random-videos" style="background: black; width: 1370px; margin-left: 0; padding: 30px">
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/FMG0S7HUaTc/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/CJVPoEj03Gs/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/qJClDSM88RQ/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+        <div class="col-md-3">
+          <a href="#x"><img src="https://i.ytimg.com/vi/II16NfGCTj4/hqdefault.jpg" alt="Image" class="img-responsive"></a>
+        </div>
+    </div>
+    <!--/row-->
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -157,6 +146,7 @@
         <script src="scripts/services/videosearch.js"></script>
         <script src="scripts/controllers/current.js"></script>
         <script src="scripts/controllers/allvideos.js"></script>
+        <script src="scripts/controllers/topCarousel.js"></script>
         <!-- endbuild -->
 </body>
 </html>

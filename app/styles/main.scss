@@ -131,6 +131,11 @@ body {
     -webkit-animation-duration: bounceIn 4s;
 }
 
+.teamNameLogo {
+  margin-left: -6%;
+  margin-top: -0.8%;
+}
+
 div[ng-view].ng-enter {
     -webkit-animation: fadeIn 0.5s;
     animation: fadeIn 0.5s;
@@ -143,6 +148,7 @@ div[ng-view].ng-leave {
 
 .channel-saved-alert {
    -webkit-animation-duration: flash 4s;
+   text-align: center;
 }
 
 .video-frame:hover {
@@ -166,21 +172,21 @@ div[ng-view].ng-leave {
 
 .carousel {
   width: 90%;
-  margin: 0;
+  margin: 1%;
 }
 
-.item .col-md-3 a img {
+.random-videos .col-md-3 a img {
   border: solid;
 }
 
-.item .col-md-3 a img:hover {
+.random-videos .col-md-3 a img:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 #social-list {
-  margin-left: 38%;
-  margin-right: 50%;
+  margin-left: 28%;
+  margin-right: 30%;
   margin-top: -1%;
   margin-bottom: 1%;
 }
@@ -241,4 +247,42 @@ div[ng-view].ng-leave {
 .navbar-nav li a {
   color: white;
   font-weight: bold;
+}
+
+.item {
+  margin: 0;
+  background: black;
+  .col-md-1 a .img-responsive {
+  height: 110px;
+  }
+}
+
+.item .col-md-1 a .img-responsive:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.col-md-1 {
+  padding-top: 10px;
+  width: 10%;
+  height: 100px;
+  margin: 0;
+}
+
+.carousel {
+  background: black;
+  height: 150px;
+  margin-left: 0;
+}
+
+.carousel-inner {
+  margin-left: -10px;
+  height: 130px;
+}
+
+.carousel-control {
+  margin: 0;
+  padding:0;
+  width: 2px;
+  height: auto;
 }

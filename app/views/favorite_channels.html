@@ -1,10 +1,21 @@
 
-<h3 style="color: white">My Favorite Channels</h3>
-<div ng-repeat="channel in favchannels" style="margin-bottom: 30px">
-		<div class="container favorite-channels">
-	    	<h3 style="color: gray"><img style="width: 50px; height:auto" src="{{teamLogo}}">{{channel}}</h3>
-	    	<button class="btn btn-sm btn-primary" ng-click="saveChannel()" style="margin-top: -55px; float: right; background: maroon">Videos</button>
-		</div>
+<h3 style="color: silver; margin-left: 25%; margin-top: 2%">My Favorite Channels</h3>
+<div class="container" style="background: gray">
+	<div ng-repeat="channel in favchannels" style="margin-bottom: 1%">
+			<div class="container favorite-channels">
+				<div class="row">
+					<div class="col-md-8">
+			    		<h3 style="color: gray"><img style="width: 50px; height: auto" src="{{teamLogo}}">{{channel}}</h3>
+			    	</div>
+			    	<div class="col-md-2" style="margin-top: 3%">
+			    		<button class="btn btn-sm btn-primary" ng-click="saveChannel()" style="float: right; background: maroon">Videos</button>
+			    	</div>
+			    	<div class="col-md-2" style="margin-top: 3%">
+			    		<button class="btn btn-sm btn-primary" ng-click="removeChannel()" style="float: left; background: maroon">Remove</button>
+			    	</div>
+			    </div>
+			</div>
+	</div>
 </div>
 
 
