@@ -8,7 +8,7 @@
  * Controller of the angularAppApp
  */
 angular.module('angularAppApp')
-  .controller('topCarouselCtrl', function ($scope, $localStorage, $window, videosearch) {
+  .controller('topCarouselCtrl', function ($scope, $localStorage, $window, videosearch, $route) {
   	
     $scope.findChannelByImg = function(teamImg){
     	for(var i = 0; i < $localStorage.teamsList.length; i++){
@@ -20,9 +20,19 @@ angular.module('angularAppApp')
 		        var fullName = $localStorage.teamsList[i].name1.concat(" " + $localStorage.teamsList[i].name2);
 		        $localStorage.channelName = fullName.toUpperCase();
     			  $localStorage.teamLogo = $localStorage.teamsList[i].image;
-		        $window.location = "#/current";
+       
+              $route.reload();
+
+		          $window.location = "#/current";
+            
 	    	}
     	}
     };
+
+    $(document).ready(function() {
+      $('.carousel').carousel({
+        interval: 3000
+      });
+    });
 
   });
