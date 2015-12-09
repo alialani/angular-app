@@ -11,8 +11,6 @@ angular.module('angularAppApp')
   .controller('topCarouselCtrl', function ($scope, $localStorage, $window, videosearch) {
   	
     $scope.findChannelByImg = function(teamImg){
-    	console.log(teamImg);
-    	console.log($localStorage.teamsList[9].image);
     	for(var i = 0; i < $localStorage.teamsList.length; i++){
     		if (teamImg === $localStorage.teamsList[i].image){
 	    		$scope.channelFound = videosearch.find({
@@ -21,7 +19,7 @@ angular.module('angularAppApp')
 		        $localStorage.currentVid = $scope.channelFound;
 		        var fullName = $localStorage.teamsList[i].name1.concat(" " + $localStorage.teamsList[i].name2);
 		        $localStorage.channelName = fullName.toUpperCase();
-    			$localStorage.teamLogo = $localStorage.teamsList[i].image;
+    			  $localStorage.teamLogo = $localStorage.teamsList[i].image;
 		        $window.location = "#/current";
 	    	}
     	}

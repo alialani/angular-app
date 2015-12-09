@@ -10,10 +10,6 @@
 angular.module('angularAppApp')
   .controller('favorite_channelsCtrl', function ($scope, $localStorage) {
  	$scope.favchannels = $localStorage.savedChannels;
- 	$scope.teamLogo = $localStorage.teamLogo;
+
   });
 
-	
-$(document).ready(function(){
-	$('#myCarousel3').carousel({interval: 1000});
-});

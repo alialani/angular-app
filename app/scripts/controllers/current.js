@@ -9,13 +9,13 @@
  */
 angular.module('angularAppApp')
   .controller('CurrentCtrl', function ($scope, $routeParams, current, $localStorage, $sce) {
-   	
-  	$scope.videos = $localStorage.currentVid;
-  	$scope.chanName = $localStorage.channelName;
+    
+    $scope.videos = $localStorage.currentVid;
+    $scope.chanName = $localStorage.channelName;
     $scope.teamLogo = $localStorage.teamLogo;
-  	$scope.trustThisLink = function(link) {
-  		return $sce.trustAsResourceUrl(link);
-  	};
+    $scope.trustThisLink = function(link) {
+      return $sce.trustAsResourceUrl(link);
+    };
 
 
 
@@ -31,22 +31,23 @@ angular.module('angularAppApp')
     });
 
     $scope.saveChannel = function() {
-    	var doesExist = false;
+      var doesExist = false;
 
-    	if (!$localStorage.savedChannels) {
-    		$localStorage.savedChannels = [];
-    	} else {
-    		for ( var i=0; i < $localStorage.savedChannels.length; i++) {
-	    		if ( $localStorage.savedChannels[i] === $scope.chanName ) {
-	    			doesExist = true;
+      if (!$localStorage.savedChannels) {
+        $localStorage.savedChannels = [];
+      } else {
+        for ( var i=0; i < $localStorage.savedChannels.length; i++) {
+          if ( $localStorage.savedChannels[i].NAME === $scope.chanName ) {
+            doesExist = true;
             $scope.channelSaved = {'duplicate': true};
-	    		}
-	    	}
+          }
+        }
       }
-    	if (!doesExist) {
-    		$localStorage.savedChannels.push($scope.chanName);
+      if (!doesExist) {
+        var couplet = {"NAME": $scope.chanName, "LOGO": $scope.teamLogo};
+        $localStorage.savedChannels.push(couplet);
         $scope.channelSaved = {'success': true};
-    	}
+      }
 
       // console.log("Click");
 
@@ -59,7 +60,6 @@ angular.module('angularAppApp')
    };
 });
   
-
 
 
 
